@@ -2,4 +2,4 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## NextJS Pro Course
 
-- Application Setup and Layout
+- Next.js Foundations
