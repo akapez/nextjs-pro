@@ -2,4 +2,12 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## NextJS Pro Course
 
-- Next.js Foundations
+- Next.js Foundation
+    - Application setup and layout
+    - Adding authorization
+    - Adding interactivity
+    - Connecting to database
+    - Routing
+    - React server components (RSC)
+    - Advanced routing
+    - Streaming
