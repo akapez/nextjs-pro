@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## NextJS Pro Course
+## NextJS Pro Workshop
 
-- Next.js Foundation
-- Styling Next.js Application with CSS
+1. Next.js Foundation
+2. Styling Next.js Application with CSS
