@@ -2,4 +2,5 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## NextJS Pro Course
 
-- Next.js Foundations
+- Next.js Foundation
+- Styling Next.js Application with CSS
