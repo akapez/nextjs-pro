@@ -1,14 +1,35 @@
 import PRODUCTS from '../products';
 import { ProductCard } from '@/components/product-card';
-import styles from './page.module.css';
+
+import { styled, css } from "@pigment-css/react";
+
+const MOBILE = "@media screen and (max-width: 768px)";
+
+const mainClass = css`
+  margin: 0 auto;
+  max-width: 960px;
+  font-family: sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const Card = styled("div")`
+  padding: 0.2rem;
+  width: 33%;
+  max-width: 33%;
+  ${() => MOBILE} {
+    width: 100%;
+    max-width: 100%;
+  }
+`;
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className={mainClass}>
       {PRODUCTS.map((product) => (
-        <div key={product.id} className={styles.card}>
+        <Card key={product.id}>
           <ProductCard product={product} />
-        </div>
+        </Card>
       ))}
     </main>
   );
