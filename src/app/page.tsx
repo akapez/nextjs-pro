@@ -1,15 +1,21 @@
-import PRODUCTS from '../products';
-import { ProductCard } from '@/components/product-card';
-import styles from './page.module.css';
+import Blog from '@/components/blog';
+import BlogForm from '@/components/blog-form';
+import { getEntries } from '@/blog';
+import { Box, Container } from '@mui/material';
 
-export default function Home() {
+export default async function Home() {
+  const entires = await getEntries();
+
   return (
-    <main className={styles.main}>
-      {PRODUCTS.map((product) => (
-        <div key={product.id} className={styles.card}>
-          <ProductCard product={product} />
-        </div>
-      ))}
-    </main>
+    <Container maxWidth="lg">
+      <Box sx={{ p: 4, display: "flex" }}>
+        <Box sx={{ width: "50%" }}>
+          <Blog entries={entires} />
+        </Box>
+        <Box sx={{ width: "50%" }}>
+          <BlogForm />
+        </Box>
+      </Box>
+    </Container>
   );
 }
