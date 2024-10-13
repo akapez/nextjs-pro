@@ -35,7 +35,7 @@ export default function BlogForm() {
                 <Controller name="text" control={form.control} render={({ field }) => (
                     <FormControl>
                         <InputLabel htmlFor="text">Description</InputLabel>
-                        <TextField id="text" aria-describeby="Description" {...field} variant="outlined" multiline minRows={4} />
+                        <TextField id="text" aria-describedby="Description" {...field} variant="outlined" multiline minRows={4} />
                     </FormControl>
                 )} />
                 <div>
