@@ -3,4 +3,4 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## NextJS Pro Workshop
 
 - Styling Next.js Application with CSS
-    - CSS Module
+    - Meta's StyleX
