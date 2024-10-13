@@ -2,5 +2,5 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## NextJS Pro Workshop
 
-1. Next.js Foundation
-2. Styling Next.js Application with CSS
+- Styling Next.js Application with CSS
+    - Component Library - Shadcn/ui
