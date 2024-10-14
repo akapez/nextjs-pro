@@ -3,15 +3,16 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## NextJS Pro Workshop
 
 - Next.js Production Project Setup and Infrastructure
+
   - Setting up Eslint and Prettier
     ```
     npm install --save-dev eslint-config-prettier prettier prettier-plugin-tailwindcss
     ```
     ```json
     {
-    // inside vscode setting.json
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+      // inside vscode setting.json
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
     }
     ```
     ```json
@@ -36,26 +37,33 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
         "",
         "^[./]"
       ]
-    } 
+    }
     ```
-    
   - Storybook
     ```
     npx storybook@latest init
     ```
-    
-  - Unit Testing
+  - Unit Testing (Jest)
+
     ```
     npm install --save-dev jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom @types/jest ts-node @testing-library/user-event
     ```
+
     ##### Initializing Jest
+
     ```
     npm init jest@latest
     ```
+
     ```json
     // inside package.json
     "scripts": {
       "test": "jest",
       "test:watch": "jest --watch"
     },
+    ```
+
+  - End to End Testing (Playwright)
+    ```
+    npm init playwright@latest
     ```
