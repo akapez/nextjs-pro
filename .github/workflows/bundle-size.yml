@@ -15,7 +15,7 @@ env:
   CI_REPO_OWNER: akapez
   CI_REPO_NAME: bundle-size-checker
   CI_COMMIT_SHA: ${{ github.sha }}
-  CI_BRANCH: main
+  CI_BRANCH: 03-b-npi-aqe
   BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
 
 permissions:
