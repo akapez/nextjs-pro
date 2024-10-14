@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div>
-      <h1>Bundlewatch</h1>
+      <h1>Bundlewatch Test</h1>
     </div>
   );
 }
