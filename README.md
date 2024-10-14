@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## NextJS Pro Workshop
 
-1. Next.js Foundation
-2. Styling Next.js Application with CSS
-3. Next.js Production Project Setup and Infrastructure
+- Next.js Production Project Setup and Infrastructure
+  - Automated Quality Enforcement
+    ```
+    npm install --save-dev bundlewatch
+    ```
