@@ -5,3 +5,4 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - Next.js Production Project Setup and Infrastructure
   - Setting up Eslint and Prettier
   - Storybook
+  - Unit Testing

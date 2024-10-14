@@ -1,7 +1,10 @@
+import Counter from "./counter";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Project Infrastructure</h1>
-    </div>
+    <main>
+      <h1>Counter Test</h1>
+      <Counter />
+    </main>
   );
 }
