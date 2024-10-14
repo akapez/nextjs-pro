@@ -7,3 +7,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
     ```
     npm install --save-dev bundlewatch
     ```
+    ```
+    npx husky init
+    ```
