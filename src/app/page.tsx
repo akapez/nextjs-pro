@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div>
-      Hello
+      <h1>Bundlewatch</h1>
     </div>
   );
 }
