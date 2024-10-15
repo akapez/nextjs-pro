@@ -5,3 +5,4 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 1. Next.js Foundation
 2. Styling Next.js Application with CSS
 3. Next.js Production Project Setup and Infrastructure
+4. Next.js React Server Component (RSC) Architecture
