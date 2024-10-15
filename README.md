@@ -2,6 +2,5 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## NextJS Pro Workshop
 
-1. Next.js Foundation
-2. Styling Next.js Application with CSS
-3. Next.js Production Project Setup and Infrastructure
+- Next.js React Server Component (RSC) Architecture
+  - Caching with the Next.js App Router
