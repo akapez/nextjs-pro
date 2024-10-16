@@ -1,11 +1,32 @@
-import Dashboard from "./dashboard";
+import UploadForm from "./upload-form";
+import fs from "node:fs/promises";
+import Image from "next/image";
 
-
-export default function Home() {
-
+export default async function Home() {
+  const files = await fs.readdir("./public/uploads");
+  const images = files
+    .filter((file) => file.endsWith(".jpg"))
+    .map((file) => `/uploads/${file}`);
   return (
     <main>
-      <Dashboard />
+      <h1>File Upload Example</h1>
+      <div>
+        <UploadForm />
+      </div>
+      <div className="flex flex-wrap">
+        {images.map((image) => (
+          <div key={image} className="px-2 h-auto w-1/2">
+            <Image
+              key={image}
+              src={image}
+              width={400}
+              height={400}
+              alt={image}
+              className="object-cover w-full"
+            />
+          </div>
+        ))}
+      </div>
     </main>
   );
 }
