@@ -3,4 +3,4 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## NextJS Pro Workshop
 
 - Next.js React Server Component (RSC) Architecture
-  - Granular Suspense in React
+  - Streaming with Server Actions
