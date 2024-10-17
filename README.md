@@ -3,4 +3,4 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## NextJS Pro Workshop
 
 - State Management with Next.js App Router
-  - Redux for State Management
+  - Zustand for State Management
