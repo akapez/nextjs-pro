@@ -1,8 +1,23 @@
 "use client";
-import { useReviews } from "./reviews-context";
+import { Review } from "@/api/types";
+import { useRef } from "react";
+import { useStore } from "react-redux";
+import { RootState, setReviews, useReviews } from "../../../store/store";
 
-export default function AverageRating() {
-  const [reviews] = useReviews();
+export default function AverageRating({
+  reviews: initialReviews,
+}: {
+  reviews: Review[];
+}) {
+  const store = useStore<RootState>();
+  const initialized = useRef(false);
+  if (!initialized.current) {
+    store.dispatch(setReviews(initialReviews));
+    initialized.current = true;
+  }
+
+  const reviews = useReviews();
+
   return (
     <>
       {reviews && reviews?.length && (

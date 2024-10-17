@@ -2,7 +2,8 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import CartPopup from "./cart-propup";
+import { useCart } from "../store/store";
+import CartPopup from "./cart-popup";
 import { type Cart } from "@/api/types";
 
 export default function Header({
@@ -10,6 +11,7 @@ export default function Header({
 }: {
   clearCartAction: () => Promise<Cart>;
 }) {
+  const cart = useCart();
   const [showCart, setShowCart] = useState(false);
 
   return (
@@ -25,7 +27,9 @@ export default function Header({
           setShowCart(!showCart);
         }}
       >
-        <span className="text-xl font-bold leading-10 text-gray-100">{0}</span>
+        <span className="text-xl font-bold leading-10 text-gray-100">
+          {cart.products.length}
+        </span>
         {showCart && <CartPopup clearCartAction={clearCartAction} />}
       </div>
     </header>

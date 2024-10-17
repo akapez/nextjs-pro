@@ -1,21 +1,33 @@
 "use client";
+import { useRef } from "react";
+import { useDispatch, useStore } from "react-redux";
 import { useState } from "react";
+import { useReviews, setReviews, RootState } from "@/app/store/store";
 
 import { Review } from "@/api/types";
-import { useReviews } from "./reviews-context";
 
 export default function Reviews({
+  reviews: initialReviews,
   addReviewAction,
 }: {
+  reviews: Review[];
   addReviewAction: (text: string, rating: number) => Promise<Review[]>;
 }) {
-  const [reviews, setReviews] = useReviews();
+  const store = useStore<RootState>();
+  const initialized = useRef(false);
+  if (!initialized.current) {
+    store.dispatch(setReviews(initialReviews));
+    initialized.current = true;
+  }
+  const reviews = useReviews();
   const [reviewText, setReviewText] = useState("");
   const [reviewRating, setReviewRating] = useState(5);
 
+  const dispatch = useDispatch();
+
   return (
     <>
-      {reviews?.map((review, index) => (
+      {reviews?.map((review: any, index: number) => (
         <div key={index} className="p-5">
           <div className="my-1 text-md leading-5 text-gray-300">
             {review.rating} stars
@@ -28,7 +40,7 @@ export default function Reviews({
       <form
         onSubmit={async (evt) => {
           evt.preventDefault();
-          setReviews(await addReviewAction(reviewText, reviewRating));
+          dispatch(setReviews(await addReviewAction(reviewText, reviewRating)));
           setReviewText("");
           setReviewRating(5);
         }}

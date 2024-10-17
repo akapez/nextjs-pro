@@ -63,13 +63,16 @@ export default async function ProductDetail({
           <div className="mt-1 text-sm leading-5 text-gray-300 font-light italic">
             {product.description}
           </div>
-          <AverageRating />
+          <AverageRating reviews={product.reviews} />
           <div className="flex justify-end">
             <AddToCart addToCartAction={addToCartAction} />
           </div>
         </div>
         <div className="w-full">
-          <Reviews addReviewAction={addReviewAction} />
+          <Reviews
+            reviews={product.reviews}
+            addReviewAction={addReviewAction}
+          />
         </div>
         <div className="flex flex-wrap gap-2 w-full">
           <h1 className="text-2xl font-bold mt-2 -mb-2">Related Products</h1>
