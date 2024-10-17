@@ -1,15 +1,17 @@
 "use client";
 import { useState } from "react";
 
+import { useReviews } from "../../../store/reviews-provider";
+
 import { Review } from "@/api/types";
-import { useReviews } from "./reviews-context";
 
 export default function Reviews({
   addReviewAction,
 }: {
   addReviewAction: (text: string, rating: number) => Promise<Review[]>;
 }) {
-  const [reviews, setReviews] = useReviews();
+  const { reviews, setReviews } = useReviews()();
+
   const [reviewText, setReviewText] = useState("");
   const [reviewRating, setReviewRating] = useState(5);
 

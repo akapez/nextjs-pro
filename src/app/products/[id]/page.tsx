@@ -7,7 +7,7 @@ import Reviews from "./components/reviews";
 import AddToCart from "../../components/add-to-cart";
 import ProductCard from "../../components/product-card";
 import AverageRating from "./components/average-rating";
-import ReviewsProvider from "./components/reviews-context";
+import ReviewsProvider from "../../store/reviews-provider";
 
 import { getProductById, getProducts } from "@/api/products";
 import { addToCart } from "@/api/cart";

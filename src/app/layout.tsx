@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import CartProvider from "./components/cart-context";
+import CartProvider from "./store/cart-provider";
 import Header from "./components/header";
 
 import { getCart, clearCart } from "@/api/cart";

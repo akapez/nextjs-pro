@@ -1,13 +1,13 @@
 "use client";
 import { type Cart } from "@/api/types";
-import { useCart } from "./cart-context";
+import { useCart } from "../store/cart-provider";
 
 export default function CartPopup({
   clearCartAction,
 }: {
   clearCartAction: () => Promise<Cart>;
 }) {
-  const [cart, setCart] = useCart();
+  const { cart, setCart } = useCart()();
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">

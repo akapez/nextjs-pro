@@ -1,8 +1,9 @@
 "use client";
-import { useReviews } from "./reviews-context";
+import { useReviews } from "../../../store/reviews-provider";
 
 export default function AverageRating() {
-  const [reviews] = useReviews();
+  const reviews = useReviews()((state) => state.reviews);
+
   return (
     <>
       {reviews && reviews?.length && (
