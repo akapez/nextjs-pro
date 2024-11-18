@@ -48,6 +48,20 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
     ```
     npm install --save-dev jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom @types/jest ts-node @testing-library/user-event
     ```
+  -- Eslint (unit test)
+  
+    ```
+    npm install --save-dev eslint-plugin-jest-dom eslint-plugin-testing-library
+    ```
+     ```json
+     // inside eslintrc.json
+    {
+      "extends": [
+        "plugin:jest-dom/recommended",
+        "plugin:testing-library/react"
+      ],
+    }
+    ```
 
     ##### Initializing Jest
 
